@@ -46,13 +46,13 @@ static ssize_t myfs_read_file(struct file *filp, char *buf,
         atomic_t *counter = (atomic_t *) filp->private_data;
         int v=0, len;
         char tmp[TMPSIZE];
-	const char *file_parent_name = filp -> f_path.dentry -> d_parent -> d_name.name;
+		const char *file_parent_name = filp -> f_path.dentry -> d_parent -> d_name.name;
         const char *file_name = filp -> f_path.dentry -> d_name.name;
         int int_a; // for output file.
         atomic_t input_a; // for output file. 
  
         printk("file_parent_name=%s\n", file_parent_name); // will print a, b, add, sub.
-        // 
+        
         if(strcmp(file_parent_name, "input") == 0){ // the name of the parent file is input. 
                 v = atomic_read(counter);
                 if (*offset > 0){
@@ -118,8 +118,6 @@ static struct dentry *myfs_create_file (struct super_block *sb,
                 struct dentry *dir, const char *name,
                 atomic_t *counter)
 {
-	//atomic_t *counter = *counter_addr;
-
         struct dentry *dentry;
         struct inode *inode;
         struct qstr qname;
@@ -213,19 +211,11 @@ static atomic_t a, b; // a, b are in input direction.
 static void myfs_create_files (struct super_block *sb, struct dentry *root)
 { // change 
         struct dentry *input;
-	struct dentry *output;
- 	// atomic_t *a_addr = &a;
-	// atomic_t *b_addr = &b;
-        // atomic_t *input_ab_addr = &input_ab;
-	//atomic_t *b_addr = &b;
+		struct dentry *output;
 
         atomic_set(&a, 0);
-	atomic_set(&b, 0);
+		atomic_set(&b, 0);
 	
-        //myfs_create_file(sb, root, "a", &a);
- 
-        //atomic_set(&subcounter, 0);
-
         input = myfs_create_dir(sb, root, "input");
         if (input){
                 myfs_create_file(sb, input, "a", &a);
