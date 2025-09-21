@@ -17,4 +17,4 @@
 
 Execution process:
 ![image](https://github.com/20sharon/LinuxKernel/blob/main/HW5_myfs/Execution_process_01.png)
-![image](https://github.com/20sharon/LinuxKernel/blob/main/HW5_myfs/%E5%9F%B7%E8%A1%8C%E6%88%AA%E5%9C%9602.png)
+![image](https://github.com/20sharon/LinuxKernel/blob/main/HW5_myfs/Execution_process_02.png)
