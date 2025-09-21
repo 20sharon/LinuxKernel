@@ -1,6 +1,6 @@
-1. Change the root directory of the file system to the following structure.
-    /--+ counter (file)                                          /--+ input (dir)
-       |                                                            |   |
+1. Change the root directory of the file system to the following structure.  
+    /--+ counter (file)                                          /--+ input (dir)  
+       |                                                            |   |  
        + subdir (dir)                     ----->                    |   +-- a (file)
          |                                                          |   +-- b (file)
          +-- subcounter (file)                                      |  
@@ -14,6 +14,7 @@
 3. Can obtain the results by:
    - cat /output/add → returns a + b
    - cat /output/sub → returns a – b
+
 
 Execution process:
 ![image](https://github.com/20sharon/LinuxKernel/blob/main/HW5_myfs/Execution_process_01.png)
