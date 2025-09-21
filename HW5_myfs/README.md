@@ -1,14 +1,14 @@
 1. Change the root directory of the file system to the following structure.  
     /--+ counter (file)                                          /--+ input (dir)  
        |                                                            |   |  
-       + subdir (dir)                     ----->                    |   +-- a (file)
-         |                                                          |   +-- b (file)
-         +-- subcounter (file)                                      |  
-                                                                    + output (dir)
-                                                                      |
-                                                                      +-- add (file)
-                                                                      +-- sub (file)
-2. Can set the values of a and b (range: 0–255) by using:
+       + subdir (dir)                     ----->                    |   +-- a (file)  
+         |                                                          |   +-- b (file)  
+         +-- subcounter (file)                                      |    
+                                                                    + output (dir)  
+                                                                      |  
+                                                                      +-- add (file)  
+                                                                      +-- sub (file)  
+2. Can set the values of a and b (range: 0–255) by using:  
    - echo number > /input/a
    - echo number > /input/b
 3. Can obtain the results by:
