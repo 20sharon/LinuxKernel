@@ -1,6 +1,6 @@
 1. Change the root directory of the file system to the following structure.  
-    ```/--+ counter (file)                                          /--+ input (dir)  
-       |                                                            |   |           ``` 
+    <pre>/--+ counter (file)                                          /--+ input (dir)  
+       |                                                            |   |           </pre>  
     `   + subdir (dir)                     ----->                    |   +-- a (file)`  
     `     |                                                          |   +-- b (file)`  
     `     +-- subcounter (file)                                      |               `  
